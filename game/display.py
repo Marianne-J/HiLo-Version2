@@ -16,31 +16,38 @@ class Display():
 
         return ui_message, message_select_user, message_deleted_user, message_created_user
     
-    def get_guess_display(self, round):
+    def get_guess_display(self, current_num):
         '''Builds and returns the messages for getting the guess.
         
         Arguments:
-            round (Round): A Round object
+            current_num (Int): The current number
         
         Returns:
             String
         '''
 
-        current_num_message = f'\n\nCurrent number: {round.get_current_num()}'
+        current_num_message = f'\n\nCurrent number: {current_num}'
         get_guess_message = f'Higher or lower? (h/l): '
 
         return current_num_message, get_guess_message
     
-    def get_round_end_display(self, round, score, lives):
+    def get_round_end_display(self, new_num, score, lives):
         '''Builds and returns the messages displayed at the end of the round.
 
         Arguments:
-            round (Round): A Round object
+            new_num (Int): The new number
             score (Int): The current score
             lives (Int): The number of lives remaining
         '''
 
-        round_end_message = f'\n\nNew number: {round.get_new_num()}\nCurrent score: {score}\nLives remaining: {lives}'
+        round_end_message = f'\n\nNew number: {new_num}\nCurrent score: {score}\nLives remaining: {lives}'
         continue_message = 'Continue playing? (y/n): '
 
         return round_end_message, continue_message
+    
+    def get_game_over_display(self, overall_high_score, player_high_score):
+        '''Builds and returns the messages displayed at the end of the game.'''
+
+        message = f'Game Over!\n\nYour current high score: {player_high_score}\nThe current high score: {overall_high_score}'
+
+        return message
