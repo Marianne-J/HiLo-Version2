@@ -5,8 +5,8 @@ class Round():
     loses a life. Also determines whether or not the game should end.
 
     Attributes:
-        current_number (Int): The current number in use
-        new_number (Int): The new number
+        _current_number (Int): The current number in use
+        _new_number (Int): The new number
     '''
 
     def __init__(self):
@@ -15,6 +15,14 @@ class Round():
         self._new_number = None
     
     def get_points(self, guess):
+        '''Determines whether the player earns points or loses a life.
+
+        Arguments:
+            guess (String): The player's guess
+        
+        Returns:
+            Int and Bool
+        '''
         #Set initial values for lose_life and points
         points = 0
         lose_life = False
@@ -22,6 +30,11 @@ class Round():
         #Check if player guessed correctly
         if self._new_number > self._current_number:
             if guess.lower() == 'h':
+                points += 100
+            else:
+                lose_life = True
+        elif self._new_number < self._current_number:
+            if guess.lower() == 'l':
                 points += 100
             else:
                 lose_life = True

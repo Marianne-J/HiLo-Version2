@@ -13,6 +13,7 @@ class Console():
             String
         '''
 
+        #Get user response
         response = input(prompt)
 
         return response
