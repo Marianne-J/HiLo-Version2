@@ -4,9 +4,7 @@ This is a game of HiLo, based on a version of the game I helped write previously
 
 My purpose in writing this program was to learn how to work with a cloud database and integrate it into a program.
 
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of the cloud database.}
-
-[Software Demo Video]()
+[Software Demo Video](https://youtu.be/uNAcrwb6ibI)
 
 # Cloud Database
 
