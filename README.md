@@ -1,36 +1,30 @@
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This is a game of HiLo, based on a version of the game I helped write previously and improved on from a version I recently wrote in Java. The object of the game is for the player to guess whether a randomly generated number between 1 and 100 will be higher or lower than the current number displayed. If the player guesses correctly, they will recieve points. If the player guesses incorrectly, they will lose a life. The game ends either when the player chooses to quit or when the player runs out of lives.
 
-{Provide a description the software that you wrote and how it integrates with a Cloud Database.  Describe how to use your program.}
-
-{Describe your purpose for writing this software.}
+My purpose in writing this program was to learn how to work with a cloud database and integrate it into a program.
 
 {Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of the cloud database.}
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video]()
 
 # Cloud Database
 
-{Describe the cloud database you are using.}
-
-{Describe the structure of the database that you created.}
+I used the Firestore database that comes with a Google Firebase project. The structure is simple and contains one table, which holds the users. Each user has a username and high_score attribute that holds a user's name and high_score respectively.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
+* Firebase
+* Visual Studio Code
+* Python 3.9
+* Git / GitHub
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [Firebase Documentation](https://firebase.google.com/docs/firestore)
+* [Google Cloud Documentation](https://cloud.google.com/compute/docs/access/create-enable-service-accounts-for-instances)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* Improve data security
+* Switch user name to user ID for document name
